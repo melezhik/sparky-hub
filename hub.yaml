@@ -1,0 +1,12 @@
+version: 1
+kind: stack
+meta:
+  name: sparky
+  title: Happy Sparky
+  brief: Example of Hub Jobs on Sparky Cluster
+  description: Example of Hub Jobs on Sparky Cluster
+
+components:
+- name: com1
+  source:
+    dir: components/com1
