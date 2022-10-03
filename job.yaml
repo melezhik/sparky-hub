@@ -3,11 +3,19 @@ projects:
     path: https://github.com/melezhik/sparky-hub.git
     action: deploy-hubcli
     title: install hub cli
+    artifacts:
+      out:
+        -
+          file: hub
+          path: hub
   hub-deploy:
     path: https://github.com/melezhik/sparky-hub.git
     title: hub deploy
     action: elaborate deploy
     options: --dump_task
+    artifacts:
+      in:
+        - hub
     before:
       -
         name: hub-install-cli
