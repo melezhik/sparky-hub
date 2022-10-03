@@ -3,6 +3,8 @@ projects:
     path: https://github.com/melezhik/sparky-hub.git
     action: deploy-hubcli
     title: install hub cli
+    sparrowdo:
+      no_sudo: true
     artifacts:
       out:
         -
@@ -13,6 +15,8 @@ projects:
     title: hub deploy
     action: elaborate deploy
     options: --dump_task
+    sparrowdo:
+      no_sudo: true
     artifacts:
       in:
         - hub
