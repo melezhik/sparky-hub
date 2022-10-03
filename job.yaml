@@ -1,0 +1,13 @@
+projects:
+  hub-install-cli:
+    path: https://github.com/melezhik/sparky-hub.git
+    action: deploy-hubcli
+    title: install hub cli
+  hub-deploy:
+    path: https://github.com/melezhik/sparky-hub.git
+    title: hub deploy
+    action: elaborate deploy
+    options: --dump_task
+    before:
+      -
+        name: hub-install-cli
