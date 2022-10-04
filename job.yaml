@@ -10,10 +10,12 @@ projects:
         -
           file: hub
           path: hub
-  hub-deploy:
+  hub-deploy-stack2:
     path: https://github.com/melezhik/sparky-hub.git
-    title: hub deploy
+    title: hub deploy stack2
     action: elaborate deploy
+    variables:
+      STACK: 2
     options: --dump_task
     sparrowdo:
       no_sudo: true
@@ -23,3 +25,18 @@ projects:
     before:
       -
         name: hub-install-cli
+  hub-deploy-stack1:
+    path: https://github.com/melezhik/sparky-hub.git
+    title: hub deploy stack1
+    action: elaborate deploy
+    options: --dump_task
+    variables:
+      STACK: 1
+    sparrowdo:
+      no_sudo: true
+    artifacts:
+      in:
+        - hub
+    before:
+      -
+        name: hub-deploy-stack2
