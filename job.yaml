@@ -3,6 +3,7 @@ projects:
     path: https://github.com/melezhik/sparky-hub.git
     action: deploy-hubcli
     title: install hub cli
+    queue-id: hub-install-cli
     sparrowdo:
       no_sudo: true
     artifacts:
@@ -14,6 +15,7 @@ projects:
     path: https://github.com/melezhik/sparky-hub.git
     title: hub deploy stack2
     action: elaborate deploy
+    queue-id: hub-deploy-stack2
     vars:
       STACK: 2
     options: --dump_task
@@ -30,6 +32,7 @@ projects:
     title: hub deploy stack1
     action: elaborate deploy
     options: --dump_task
+    queue-id: hub-deploy-stack1
     vars:
       STACK: 1
     sparrowdo:
