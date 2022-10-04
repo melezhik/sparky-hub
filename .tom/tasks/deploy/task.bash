@@ -1,6 +1,7 @@
 set -e
+
 chmod a+x .artifacts/hub
 
-export STACK
+echo "stack: "  $(config stack)
 
 .artifacts/hub deploy hub.yaml.elaborate
